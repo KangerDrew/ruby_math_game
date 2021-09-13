@@ -59,4 +59,29 @@ class Game
     p2.life = 3
   end
 
+  def rand_num
+    rand(1..20)
+  end
+
+  def set_player(p1, p2)
+    if current_player == nil
+      self.current_player = p1
+    elsif current_player == p1
+      self.current_player = p2
+    else
+      self.current_player = p1
+    end
+  end
+
+  def game_over?(p1, p2)
+    if p1.life == 0
+      self.winner = p2
+      return true
+    elsif p2.life == 0
+      self.winner = p1
+      return true
+    end
+    return false
+  end
+
 end
