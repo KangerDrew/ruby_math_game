@@ -11,7 +11,7 @@ This simple 2 player OOP-based command-line game was created using Ruby. Players
 
 The methods below are private, as they don't need to be accessed outside of the scope of the Game class.
 
-- The game needs to generate two random number between 1 and 20 for summation question. This will be done using **rand_num**
-- The Game has to switch between asking player 1 for the correct answer, and asking player 2 for the answer. This will be done via **set_player**. This function takes in 2 player class as input.
-- Since we will be repeatedly checking to see if either of the player has reached the lifepoint 0, we will implement the function **game_over?** to return a boolean to indicate the status of the game.
-- After the game is over, the lifepoints for both players will be reset back to 3 using **life_reset**.
+- The game needs to generate two random number between 1 and 20 for summation question. This will be done using **<ins>rand_num</ins>**
+- The Game has to switch between asking player 1 for the correct answer, and asking player 2 for the answer. This will be done via **<ins>set_player</ins>**. This function takes in 2 player class as input.
+- Since we will be repeatedly checking to see if either of the player has reached the lifepoint 0, we will implement the function **<ins>game_over?</ins>** to return a boolean to indicate the status of the game.
+- After the game is over, the lifepoints for both players will be reset back to 3 using **<ins>life_reset</ins>**.
