@@ -10,6 +10,15 @@ class Game
     @current_player = nil
   end
 
+  def play(p1, p2)
+    if winner
+      puts "This game has already concluded. Winner is #{winner.name}."
+      return
+    end
+
+
+  end
+
 
   private
 
