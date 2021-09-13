@@ -16,6 +16,11 @@ class Game
       return
     end
 
+    puts "-------------Let the game begin!-------------"
+    puts "Player 1 (#{p1.name}) VS Player 2 (#{p2.name})"
+    puts "---------------------------------------------"
+    life_reset(p1, p2)
+
 
   end
 
@@ -24,5 +29,10 @@ class Game
 
   attr_accessor :current_player
   attr_writer :winner
+
+  def life_reset(p1, p2)
+    p1.life = 3
+    p2.life = 3
+  end
 
 end
