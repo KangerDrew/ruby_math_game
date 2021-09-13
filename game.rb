@@ -21,6 +21,30 @@ class Game
     puts "---------------------------------------------"
     life_reset(p1, p2)
 
+    while p1.life > 0 && p2.life > 0
+      set_player(p1, p2)
+      puts "Current player is: #{current_player.name}"
+
+      val1 = rand_num
+      val2 = rand_num
+      sum = val1 + val2
+
+      puts "What is the sum of #{val1} and #{val2}?"
+      user_inp = gets.chomp.to_i
+      if user_inp != sum
+        puts "Wrong. The solution was #{sum}."
+        current_player.life -= 1
+        break if game_over?(p1, p2)
+        puts "P1: #{p1.life}/3 vs P2: #{p2.life}/3"
+      else
+        puts "You are correct!"
+        puts "P1: #{p1.life}/3 vs P2: #{p2.life}/3"
+      end
+      puts "------------------NEW TURN-------------------"
+    end
+
+    puts "Game over. The winner is #{winner.name} with the score of #{winner.life}/3!"
+    puts "------------------GAME OVER------------------"
 
   end
 
